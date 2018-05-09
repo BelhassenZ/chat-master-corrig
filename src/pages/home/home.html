@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Chat App
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="showAdd()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+      <button ion-button icon-only (click)="showList()">
+        <ion-icon name="logo-buffer"></ion-icon>
+      </button>
+
+      
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  
+
+  <sendform (onSend)="doSend($event)" *ngIf="isShowAddView"></sendform>
+
+  <message [adherants]="adherants" [filteredAdherants]="adherants" *ngIf="!isShowAddView"></message>
+  <!--<message [messages]="messages" [user]="auth.chatUser" *ngIf="messages && auth.chatUser"></message>-->
+
+</ion-content>

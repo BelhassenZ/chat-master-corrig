@@ -1,0 +1,26 @@
+<ion-grid>
+  <ion-row>
+    <ion-col col-12>
+      <ion-item>
+        <ion-label>Code :</ion-label>
+        <ion-input type="number" value="" [(ngModel)]="ad.code"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Nom Complet :</ion-label>
+        <ion-input type="text" value="" [(ngModel)]="ad.nom"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Date Debut :</ion-label>
+        <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="ad.dateDeb"></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label>Date Fin :</ion-label>
+        <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="ad.dateFin"></ion-datetime>
+      </ion-item>
+      <button ion-button color="primary" style="width: 100%" (click)="addAd()">
+        <ion-icon name="text"></ion-icon>
+        Ajouter
+      </button>
+    </ion-col>
+  </ion-row>
+</ion-grid>

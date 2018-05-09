@@ -1,0 +1,21 @@
+<ion-grid class="messages-container">
+  <ion-row>
+    <ion-item>
+        <ion-label>Rechercher par code :</ion-label>
+        <ion-input type="text" [(ngModel)]="textFilter" ></ion-input>
+    </ion-item>
+  </ion-row>
+  <ion-row *ngFor="let ad of filteredAdherants" class="message">
+    <ion-col col-12>
+      <div>
+        <span class="user-name">{{ad.nom}}</span>
+        <span class="name-suffix">#{{ad.code}}</span>
+      </div>
+      <div style="padding-top: 0.5em;">
+        <span>Date Debut : {{ad.dateDeb}}</span><br>
+        <span >Date Fin : {{ad.dateFin}}</span>
+        <!-- <span [ngClass]="{'text':true, 'owner': msg.user.email == user.email}">{{msg.text}}</span> -->
+      </div>
+    </ion-col>
+  </ion-row>
+</ion-grid>
